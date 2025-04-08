@@ -1,4 +1,4 @@
-# 📊 Digit Counter in Java
+# 📊 Count Number of Digit in a Number
 
 This Java program calculates the **number of digits** in a given non-negative integer.
 
