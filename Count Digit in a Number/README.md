@@ -10,5 +10,7 @@ The program follows these steps:
 
 1. Check the number is 0 or not (If n = 0 then return count = 1)
 2. If greater than 0 then
-3. 
+3. Remove Last digit (n/10) 
+4. Increase Count Value by 1 (count++)
+5. 
 4. **Return** the digit count to `main` and print the result.
