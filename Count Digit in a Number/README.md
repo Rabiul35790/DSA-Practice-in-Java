@@ -12,5 +12,5 @@ The program follows these steps:
 2. If greater than 0 then
 3. Remove Last digit (n/10) 
 4. Increase Count Value by 1 (count++)
-5. 
-4. **Return** the digit count to `main` and print the result.
+5. Repeat step 2 to 4
+6. Return the value of Count
