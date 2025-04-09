@@ -14,10 +14,7 @@ Since 10 = 2 × 5 and factorials have more factors of 2 than 5, we only need to 
 ## Calculation Method  
 To find the number of trailing zeros in \( n! \):  
 ### Formula  
-\[  
-\text{Trailing Zeros} = \left\lfloor \frac{n}{5} \right\rfloor + \left\lfloor \frac{n}{25} \right\rfloor + \left\lfloor \frac{n}{125} \right\rfloor + \ldots  
-\]  
-This continues until \( 5^k > n \).  
+<pre lang="markdown"> ### Trailing Zeros Formula The number of trailing zeros in a factorial \( n! \) is given by: ```math \text{Trailing Zeros} = \left\lfloor \frac{n}{5} \right\rfloor + \left\lfloor \frac{n}{25} \right\rfloor + \left\lfloor \frac{n}{125} \right\rfloor + \cdots ``` This continues until \( 5^k > n \), where \( k \) is the largest integer such that \( 5^k \leq n \). </pre>
 
 ### Steps to Calculate Trailing Zeros  
 1. **Initialize Variables**:  
