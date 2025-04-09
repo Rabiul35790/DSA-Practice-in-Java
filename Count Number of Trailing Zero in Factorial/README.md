@@ -1,50 +1,62 @@
-# Trailing Zeros in Factorials  
+# Trailing Zeros in Factorials
 
-## Overview  
-This document explains an efficient method to calculate the number of trailing zeros in the factorial of a number \( n \) using mathematical reasoning instead of direct calculation.  
+## 📘 Overview
+This document explains a simple and efficient method to calculate the number of trailing zeros in the factorial of a number `n` using mathematical logic instead of directly computing the factorial.
 
-## Understanding Factorials  
-The factorial of \( n \) (denoted \( n! \)) is the product of all positive integers up to \( n \). For example:  
-- \( 5! = 5 * 4 * 3 * 2 * 1 = 120 \)  
+---
 
-## Trailing Zeros  
-Trailing zeros are the zeros that appear at the end of a number. In factorials, these zeros are created by multiplying factors of 10.
-Since 10 = 2 × 5 and factorials have more factors of 2 than 5, we only need to count the number of times 5 appears as a factor in the numbers from 1 to 𝑛. 
+## ✅ What is a Factorial?
+The factorial of a number `n` (written as `n!`) is the product of all positive integers up to `n`.
 
-## Calculation Method  
-To find the number of trailing zeros in \( n! \):  
-### Formula  
-<pre lang="markdown"> ### Trailing Zeros Formula The number of trailing zeros in a factorial \( n! \) is given by: ```math \text{Trailing Zeros} = \left\lfloor \frac{n}{5} \right\rfloor + \left\lfloor \frac{n}{25} \right\rfloor + \left\lfloor \frac{n}{125} \right\rfloor + \cdots ``` This continues until \( 5^k > n \), where \( k \) is the largest integer such that \( 5^k \leq n \). </pre>
+For example:
 
-### Steps to Calculate Trailing Zeros  
-1. **Initialize Variables**:  
-   - `result`: to store the count of trailing zeros.  
-   - `powerOfFive`: initialized to 5.  
+---
 
-2. **Iterative Calculation**:  
-   - While \( n \geq \text{powerOfFive} \):  
-     - Add \( \left\lfloor \frac{n}{\text{powerOfFive}} \right\rfloor \) to `result`.  
-     - Multiply `powerOfFive` by 5 to check higher powers.  
+## ❓ What Are Trailing Zeros?
+Trailing zeros are the zeros that appear at the end of a number.  
+In factorials, trailing zeros come from factors of `10`.
 
-3. **Output the Result**: The `result` will provide the total trailing zeros once the loop completes.  
+Since `10 = 2 × 5`, and factorials have more 2s than 5s, we only need to count how many times `5` appears as a factor in numbers from `1` to `n`.
 
-## Example Calculations  
-1. **For 5!**:  
-   \[  
-   \text{Trailing Zeros} = \left\lfloor \frac{5}{5} \right\rfloor + 0 = 1  
-   \]  
+---
 
-2. **For 25!**:  
-   \[  
-   \text{Trailing Zeros} = \left\lfloor \frac{25}{5} \right\rfloor + \left\lfloor \frac{25}{25} \right\rfloor = 5 + 1 = 6  
-   \]  
+## 🧮 How to Calculate Trailing Zeros in `n!`
 
-3. **For 200!**:  
-   \[  
-   \text{Trailing Zeros} = \left\lfloor \frac{200}{5} \right\rfloor + \left\lfloor \frac{200}{25} \right\rfloor + \left\lfloor \frac{200}{125} \right\rfloor = 40 + 8 + 1 = 49  
-   \]  
+### 📌 Formula:
+We keep dividing `n` by powers of `5` and add up the results.
 
-## Conclusion  
-This method provides a streamlined way to compute the number of trailing zeros in a factorial, optimizing the calculation for larger values of \( n \).  
 
-For further exploration, you can check out the original lecture: [Find the Number Of Trailing Zeros In A Factorial | FREE DSA Course in JAVA | Lecture 7 - YouTube](https://www.youtube.com/watch?v=67f6741db44f90e1e1a063f8).  
+We continue this until `5^k > n`.
+
+---
+
+### 📝 Step-by-Step Process:
+
+1. **Initialize**:
+   - Set `result = 0` to keep count.
+   - Start with `powerOfFive = 5`.
+
+2. **Loop**:
+   - While `n >= powerOfFive`:
+     - Add `n // powerOfFive` to `result`.
+     - Multiply `powerOfFive` by 5 to go to the next power.
+
+3. **Final Result**:
+   - The final value of `result` is the number of trailing zeros in `n!`.
+
+---
+
+## 🔍 Example Calculations
+
+### Example 1: `5!`
+
+---
+
+### Example 2: `25!`
+
+---
+
+### Example 3: `200!`
+
+---
+
