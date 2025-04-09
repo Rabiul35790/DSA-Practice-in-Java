@@ -20,10 +20,6 @@ Since `10 = 2 × 5`, and factorials have more 2s than 5s, we only need to count 
 
 ---
 
-Here's how you can write the content shown in the image in `README.md` format using GitHub-flavored markdown and LaTeX math rendering support:
-
----
-
 ## How to Calculate Trailing Zeros in \( n! \)
 
 **Formula:**
