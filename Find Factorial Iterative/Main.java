@@ -15,5 +15,6 @@ public class Main
 	int n = sc.nextInt();
 	int res = fac(n);
 	System.out.println(res);
+    sc.close();
      }
 }
