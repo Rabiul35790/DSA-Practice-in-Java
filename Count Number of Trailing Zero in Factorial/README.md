@@ -8,7 +8,8 @@ The factorial of \( n \) (denoted \( n! \)) is the product of all positive integ
 - \( 5! = 5 * 4 * 3 * 2 * 1 = 120 \)  
 
 ## Trailing Zeros  
-Trailing zeros in a number are the zeros that appear at the end, resulting from factors of 10. Since \( 10 = 2 \times 5 \) and factors of 2 are more common than factors of 5 in factorials, counting factors of 5 is sufficient.  
+Trailing zeros are the zeros that appear at the end of a number. In factorials, these zeros are created by multiplying factors of 10.
+Since 10 = 2 × 5 and factorials have more factors of 2 than 5, we only need to count the number of times 5 appears as a factor in the numbers from 1 to 𝑛. 
 
 ## Calculation Method  
 To find the number of trailing zeros in \( n! \):  
