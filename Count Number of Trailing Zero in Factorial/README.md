@@ -20,13 +20,27 @@ Since `10 = 2 × 5`, and factorials have more 2s than 5s, we only need to count 
 
 ---
 
-## 🧮 How to Calculate Trailing Zeros in `n!`
+Here's how you can write the content shown in the image in `README.md` format using GitHub-flavored markdown and LaTeX math rendering support:
 
-### 📌 Formula:
-We keep dividing `n` by powers of `5` and add up the results.
+---
 
+## How to Calculate Trailing Zeros in \( n! \)
 
-We continue this until `5^k > n`.
+**Formula:**
+
+```math
+\text{Trailing Zeros} = \left\lfloor \frac{n}{5} \right\rfloor + \left\lfloor \frac{n}{25} \right\rfloor + \left\lfloor \frac{n}{125} \right\rfloor + \cdots
+
+Keep adding terms until \( 5^k > n \).
+```
+
+---
+
+### ✅ Notes:
+- The triple backticks and `math` after them (` ```math `) help render the equation as a block on platforms that support it (e.g., GitHub with math support, some VS Code preview extensions, etc.).
+- The `\left\lfloor ... \right\rfloor` renders the floor function.
+- Use `##` or `###` for heading levels according to your README structure.
+
 
 ---
 
