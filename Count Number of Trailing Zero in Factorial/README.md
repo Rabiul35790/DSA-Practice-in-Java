@@ -30,13 +30,6 @@ Since `10 = 2 × 5`, and factorials have more 2s than 5s, we only need to count 
 Keep adding terms until \( 5^k > n \).
 ```
 
----
-
-### ✅ Notes:
-- The triple backticks and `math` after them (` ```math `) help render the equation as a block on platforms that support it (e.g., GitHub with math support, some VS Code preview extensions, etc.).
-- The `\left\lfloor ... \right\rfloor` renders the floor function.
-- Use `##` or `###` for heading levels according to your README structure.
-
 
 ---
 
