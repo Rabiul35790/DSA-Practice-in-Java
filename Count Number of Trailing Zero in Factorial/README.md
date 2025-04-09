@@ -5,7 +5,7 @@ This document explains an efficient method to calculate the number of trailing z
 
 ## Understanding Factorials  
 The factorial of \( n \) (denoted \( n! \)) is the product of all positive integers up to \( n \). For example:  
-- \( 5! = 5 \times 4 \times 3 \times 2 \times 1 = 120 \)  
+- \( 5! = 5 * 4 * 3 * 2 * 1 = 120 \)  
 
 ## Trailing Zeros  
 Trailing zeros in a number are the zeros that appear at the end, resulting from factors of 10. Since \( 10 = 2 \times 5 \) and factors of 2 are more common than factors of 5 in factorials, counting factors of 5 is sufficient.  
