@@ -41,7 +41,7 @@ Keep adding terms until \( 5^k > n \).
 
 2. **Loop**:
    - While `n >= powerOfFive`:
-     - Add `n // powerOfFive` to `result`.
+     - Add `n / powerOfFive` to `result`.
      - Multiply `powerOfFive` by 5 to go to the next power.
 
 3. **Final Result**:
