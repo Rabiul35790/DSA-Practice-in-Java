@@ -12,9 +12,10 @@ public class Main
         return res;
     }
     
-	public static void main(String[] args) {
-	    Scanner sc = new Scanner(System.in);
-	    int n = sc.nextInt();
-	    System.out.println(trailzero(n));
-	}
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println(trailzero(n));
+        sc.close();
+    }
 }
