@@ -47,19 +47,3 @@ Keep adding terms until \( 5^k > n \).
 3. **Final Result**:
    - The final value of `result` is the number of trailing zeros in `n!`.
 
----
-
-## 🔍 Example Calculations
-
-### Example 1: `5!`
-
----
-
-### Example 2: `25!`
-
----
-
-### Example 3: `200!`
-
----
-
