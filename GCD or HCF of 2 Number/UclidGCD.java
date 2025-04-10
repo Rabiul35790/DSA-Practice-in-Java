@@ -28,3 +28,9 @@ public class UclidGCD {
     }
     
 }
+
+
+//Better than Brute Force Approach
+// Time Complexity: O(max(a, b)) where a and b are the two numbers
+//in the worst case it will take for example a = 100 and b = 1 then 100 time will be iterated
+// Space Complexity: O(1) as we are using only constant space
