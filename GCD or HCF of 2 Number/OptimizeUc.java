@@ -36,4 +36,7 @@ public class OptimizeUc {
     
 }
 
+// Time Complexity: O(log(min(a, b))) where a and b are the two numbers because the algorithm reduce less than half of the value of number.
+// Space Complexity: O(1) as we are using only constant space
+
 
