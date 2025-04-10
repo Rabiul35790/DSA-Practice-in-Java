@@ -82,7 +82,7 @@ Result: GCD = 6
 |-------------------------|-----|------------------|---------------------------------|
 | Brute Force             | 6   | O(n)             | Simple but inefficient          |
 | Euclid (Subtraction)    | 6   | Up to O(n)       | More efficient than brute force |
-| Euclid (Division)       | 6   | O(log n)         | Fastest and most efficient      |
+| Euclid(Division)moduler | 6   | O(log n)         | Fastest and most efficient      |
 
 ---
 
