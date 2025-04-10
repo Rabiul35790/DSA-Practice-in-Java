@@ -26,3 +26,7 @@ public class MainUnoptimize {
     }
     
 }
+
+// Time Complexity: O(min(a, b))
+// In Simply O(n) where n is the minimum of a and b
+// Space Complexity: O(1) as we are using only constant space
