@@ -42,12 +42,12 @@ Check each integer from the smaller number down to 1 to find the greatest common
 **Description**:  
 Subtract the smaller number from the larger until both numbers become equal.
 
-**Steps**:
-A = 48, B = 18
-A = 30 (48 - 18), B = 18
-A = 12 (30 - 18), B = 18
-A = 12, B = 6 (18 - 12)
-A = 6 (12 - 6), B = 6
+**Steps**:  
+A = 48, B = 18  
+A = 30 (48 - 18), B = 18  
+A = 12 (30 - 18), B = 18  
+A = 12, B = 6 (18 - 12)  
+A = 6 (12 - 6), B = 6  
 
 
 
@@ -62,10 +62,10 @@ A = 6 (12 - 6), B = 6
 **Description**:  
 Use modulo operation to reduce the problem efficiently.
 
-**Steps**:
-GCD(48, 18) => 48 % 18 = 12
-GCD(18, 12) => 18 % 12 = 6
-GCD(12, 6) => 12 % 6 = 0
+**Steps**:  
+GCD(48, 18) => 48 % 18 = 12  
+GCD(18, 12) => 18 % 12 = 6  
+GCD(12, 6) => 12 % 6 = 0  
 Result: GCD = 6
 
 
