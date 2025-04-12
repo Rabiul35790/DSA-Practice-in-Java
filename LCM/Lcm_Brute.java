@@ -1,4 +1,4 @@
-package LCM;
+
 import java.util.Scanner;
 
 public class Lcm_Brute {
