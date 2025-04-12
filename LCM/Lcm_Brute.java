@@ -22,7 +22,6 @@ public class Lcm_Brute {
             }
         }
         return lcm;
-        
     }
     
     public static void main(String[] args) {
