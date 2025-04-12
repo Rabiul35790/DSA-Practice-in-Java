@@ -21,9 +21,7 @@ The **Least Common Multiple (LCM)** of two integers *a* and *b* is the smallest 
 - The first number divisible by both *a* and *b* is the LCM.
 
 **Mathematical Idea:**
-\[
-\text{LCM}(a, b) = \min\{x \in \mathbb{N} \mid x \mod a = 0 \ \text{and} \ x \mod b = 0\}
-\]
+LCM(a, b) = min { x ∈ ℕ | x % a == 0 and x % b == 0 }
 
 **⏱ Time Complexity:**  
 `O(a × b)` (inefficient for large numbers)
@@ -34,9 +32,7 @@ The **Least Common Multiple (LCM)** of two integers *a* and *b* is the smallest 
 
 - Use the relationship between GCD and LCM:
 
-\[
-\text{LCM}(a, b) = \frac{a \cdot b}{\gcd(a, b)}
-\]
+LCM(a, b) = (a × b) / GCD(a, b)
 
 - First compute GCD using **Euclid’s Algorithm**.
 - Then calculate the LCM using the formula above.
