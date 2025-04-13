@@ -86,7 +86,7 @@ O(√n) → but even **faster in practice** because fewer numbers are checked.
 
 ---
 
-## 🔁 Summary Table:
+## 🔁 Conmarison of Time Complexity:
 
 | Method                   | Check Range           | Time Complexity           | Efficient?                  |
 |--------------------------|-----------------------|---------------------------|-----------------------------|
