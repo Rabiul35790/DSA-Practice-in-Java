@@ -1,3 +1,5 @@
+## checking Prime Number in Different Approach
+
 ## 🔷 What is a Prime Number?
 
 A **prime number** is a number **greater than 1** that is only divisible by **1** and **itself**.
