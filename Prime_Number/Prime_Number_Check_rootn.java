@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Prime_Number_Check_rootn {
     static boolean isPrime(int a) {
-        for(int i = 2; i*i <= a; i++) {
+        for(int i = 2; i <= Math.sqrt(a); i++) {
             if(a % i == 0){
                 return false;
             }
@@ -16,7 +16,6 @@ public class Prime_Number_Check_rootn {
         int a = sc.nextInt();
         System.out.println(isPrime(a));
         sc.close();
-        
     }
     
 }
