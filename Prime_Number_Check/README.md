@@ -70,9 +70,9 @@ O(√n) → Much **faster** than checking up to n/2
    - Why? All prime numbers > 3 can be written as `6k ± 1` (like 5, 7, 11, 13, 17…)
 
 So, we check divisibility by:
-- 5 and 7  
-- 11 and 13  
-- 17 and 19, etc.
+- 5 or 7  
+- 11 or 13  
+- 17 or 19, etc.
 
 This skips checking even numbers and multiples of 3.
 

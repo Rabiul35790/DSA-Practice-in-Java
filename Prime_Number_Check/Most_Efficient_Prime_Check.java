@@ -1,4 +1,4 @@
-package Prime_Number;
+package Prime_Number_Check;
 import java.util.Scanner;
 
 public class Most_Efficient_Prime_Check {
@@ -14,7 +14,7 @@ public class Most_Efficient_Prime_Check {
             return false;
         }
         for(int i = 5; i <= Math.sqrt(a); i = i + 6) { // start from 5 and then go to sqrt of number and increament by 6
-            if (a % i == 0 && a % (i + 2) == 0) { // finally checking i and i+2 are factors of the number or not
+            if (a % i == 0 || a % (i + 2) == 0) { // finally checking i and i+2 are factors of the number or not
                 return false;
             }
         }

@@ -1,6 +1,6 @@
 
 
-package Prime_Number;
+package Prime_Number_Check;
 import java.util.Scanner;
 
 public class Prime_Number_Check_Normal {
