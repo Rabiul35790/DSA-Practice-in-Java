@@ -3,6 +3,7 @@ package Prime_Number_Generation;
 import java.util.Scanner;
 
 public class Brute_Force {
+
     static boolean checkPrime(int a) {
         if(a == 1) {
             return false;
@@ -14,7 +15,7 @@ public class Brute_Force {
             return false;
         }
         for(int i = 5; i * i <= a; i = i + 6) {
-            if(a % i == 0 && a % (i+2) == 0) {
+            if(a % i == 0 || a % (i+2) == 0) {
                 return false;
             }
         }
@@ -22,8 +23,21 @@ public class Brute_Force {
     }
 
 
+
+    static void printPrime(int a) {
+        for(int i = 2; i <= a; i++) {
+            if (checkPrime(i)) {
+                System.out.println(i);
+            }
+        }
+    }
+
+
     public static void main(String[] args) {
-        
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        printPrime(a);
+        sc.close();
     }
     
 }
