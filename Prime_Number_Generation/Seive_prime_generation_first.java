@@ -24,7 +24,6 @@ class Seive_prime_generation_first{
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         generatePrime(a);
-        sc.close();
-        
+        sc.close();     
     }
 }
