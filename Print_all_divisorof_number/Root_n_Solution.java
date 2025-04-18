@@ -8,7 +8,9 @@ public class Root_n_Solution {
         for(int i = 1; i*i <= a; i++) {
             if(a%i == 0) {
                 System.out.println(i);
-                System.out.println(a/i);
+                if(i != a/i) {
+                    System.out.println(a/i);
+                }
             }
         }
     }
