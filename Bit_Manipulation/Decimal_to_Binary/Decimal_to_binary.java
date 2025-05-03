@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Decimal_to_Binary {
+public class Decimal_to_binary {
 
     static String decimaltoBinary(int a) {
         String b = "";
