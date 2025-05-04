@@ -2,7 +2,7 @@ package Bit_Manipulation.Make_on_a_Specific_Bit;
 
 import java.util.Scanner;
 
-public class Flip_ith_Bit {
+public class Flip_ith_Bit_to_on {
 
     static int makeMask(int i) {
         int mask = 1 << i;
