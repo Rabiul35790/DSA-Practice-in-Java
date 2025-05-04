@@ -1,15 +1,3 @@
----
-title: Toggle the ith Bit
-description: Bit manipulation problem to toggle a specific bit in an integer using XOR logic.
-tags:
-  - bit manipulation
-  - binary operations
-  - xor
-  - low-level programming
-difficulty: Easy
-author: Mohammad Rabiul Hasan
----
-
 # Bit Manipulation: Toggle the ith Bit
 
 ## 🔧 Problem Statement
