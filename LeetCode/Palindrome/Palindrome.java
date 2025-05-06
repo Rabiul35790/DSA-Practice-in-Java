@@ -2,17 +2,6 @@
 import java.util.Scanner;
 class Palindrome {
 
-    public int[] buildArray(int[] nums) {
-        int n = nums.length;
-        int [] ans = new int[n];
-        for(int i = 0; i < nums.length; i++)
-        {
-            ans[i] = nums[nums[i]];
-        }
-        return ans;
-        
-    }
-
     static int countPow(int x) {
         int count = 0;
         int pow = 1;
