@@ -79,4 +79,33 @@ We traverse each bit:
 1 → current = 1, max = 3
 
 
+✅ Final answer: `3` (Longest run of 1s is `111`)
 
+Another example: `a = 19`  
+- Binary: `10011`
+
+1 → current = 1, max = 1
+0 → reset
+0 → reset
+1 → current = 1, max = 1
+1 → current = 2, max = 2
+
+
+
+✅ Final answer: `2`
+
+### ⏱️ Time and Space Complexity
+
+| Type             | Complexity |
+|------------------|------------|
+| Time Complexity  | O(log n)   |
+| Space Complexity | O(1)       |
+
+---
+
+## 📊 Comparative Summary
+
+| Problem                                  | Core Idea                        | Bit Expression            | Time Complexity | Space Complexity |
+|------------------------------------------|----------------------------------|----------------------------|------------------|------------------|
+| Check if Consecutive 1s Exist            | Bitwise check with shift         | `a & (a << 1)`             | O(1)             | O(1)             |
+| Find Length of Longest Consecutive 1s    | Traverse bits with counters      | Bitwise right shift        | O(log a)         | O(1)             |
