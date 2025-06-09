@@ -20,13 +20,11 @@ We want to **mirror** the bit values:
 
 ---
 
-## 📐 Bitwise Concepts Used
-
-| Operation             | Purpose                                           |
-|-----------------------|---------------------------------------------------|
-| `1 << i`              | Create a mask to isolate the `i-th` bit           |
-| `n & (1 << i)`        | Check if `i-th` bit is 1                          |
-| `rev | (1 << j)`      | Set `j-th` bit in result                          |
+| Operation             | Description                                      |
+|-----------------------|--------------------------------------------------|
+| `1 << i`              | Creates a mask to check/set the `i-th` bit       |
+| `n & (1 << i)`        | Checks if the `i-th` bit is set in `n`           |
+| `rev | (1 << j)`      | Sets the `j-th` bit in result `rev`              |
 
 ---
 
