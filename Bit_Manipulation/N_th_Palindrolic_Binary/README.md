@@ -1,18 +1,17 @@
-# 🔢 N-th Palindromic Binary Number (Bit Manipulation)
-
----
+# 🔁 N-th Palindromic Binary Number
 
 ## 📌 Problem Statement
 
-Given a positive integer `n`, return the **n-th palindromic binary number** in decimal form.
+Given a positive integer `n`, return the **n-th palindromic binary number** in **decimal form**.  
+The binary number is considered palindromic if it reads the same forwards and backwards.
 
 ---
 
-## 💡 What is a Palindromic Binary?
+## 📘 What is a Palindromic Binary?
 
-A **palindromic binary number** is a number whose binary representation is the same when reversed.
+A palindromic binary number has the same binary digits when reversed.
 
-### 🧾 Examples:
+### ✅ Examples
 
 | Decimal | Binary  | Palindromic? |
 |---------|---------|--------------|
@@ -26,93 +25,123 @@ A **palindromic binary number** is a number whose binary representation is the s
 
 ## 🎯 Objective
 
-Return the decimal representation of the **n-th palindromic binary number**, assuming `n` is 1-indexed.
+Find and return the **decimal value** of the `n`-th palindromic binary number (1-indexed).
 
 ---
 
-## 🧠 Bitwise + Mathematical Strategy
+## 🧠 Concept & Strategy
 
-We generate palindromic binary numbers **by length**, and for each length, we count how many palindromes exist.
+To generate palindromic binary numbers, observe that:
 
-### ✅ Number of palindromic binaries of a given length `l`:
-- Let `l` be the length of the binary number.
-- Total count of palindromic binaries of length `l` is:  
-  `2^((l - 1) / 2)`
+- Palindromes of length `l` can be built by choosing only the **first half** of the bits.
+- The second half is just a **mirror** of the first half.
+- For odd-length binaries, the center bit is not mirrored but still included once.
 
-This is because only the **first half** of the binary needs to be chosen, and the second half is just a mirror.
+### ✅ Count of palindromes by length:
+For any binary length `l`, the count of palindromic binaries is:
+
+
+
+count = 2^((l - 1) / 2)
+
 
 ---
 
-### 🧮 Example: Build for n = 9
+## 🔧 Algorithm Steps
 
-1. Start generating palindromes in increasing binary lengths:
-   - Length 1 → 1 value → `1`
-   - Length 2 → 1 value → `11`
-   - Length 3 → 2 values → `101`, `111`
-   - Length 4 → 2 values → `1001`, `1111`
-   - Length 5 → 4 values → `10001`, `10101`, `11011`, `11111`
+### 1. Determine the binary length `l` such that `n` falls in that group.
 
-2. Total count of palindromes of length ≤ 5 = **9**
+Cumulatively sum palindromic binary counts of increasing lengths until `n` fits.
 
-So, the **9th palindromic binary** is the last 5-bit palindrome: `11111` (Decimal = 31)
+### 2. Find the relative index (`element`) of `n` in that group:
 
----
-
-## 🔄 Step-by-Step Breakdown
-
-Let’s say we want to find `n`-th palindromic binary number.
-
-### Step 1: Determine the length `l` such that the `n-th` binary lies within palindromes of that length.
-Accumulate total counts:
-
-length 1 → 2^0 = 1
-length 2 → 2^0 = 1
-length 3 → 2^1 = 2
-length 4 → 2^1 = 2
-length 5 → 2^2 = 4
-... until total ≥ n
+element = n - total_count_before_length_l - 1
 
 
 
 
-### Step 2: Subtract previous counts to locate the `element` within that length group.
+### 3. Build the first half:
+Set the most significant bit to ensure correct length, then shift `element` into the middle bits:
 
-### Step 3: Construct the binary:
-- Start with `1` at the MSB to ensure it’s of length `l`
-- Insert the element bits in the first half
-- Mirror the first half to form a full palindrome
+
+
+### 4. Mirror the first half into the second half using bitwise operations:
+
+- Swap bit at position `i` with bit at `l - 1 - i` if set.
+- Use `&`, `|`, and `<<` to check/set bits.
+
+### 5. Combine original and mirrored halves.
 
 ---
 
-## 🔍 Visualization Example
+## 🔍 Step-by-Step Example
 
-Let’s compute the **6th** palindromic binary number:
+### Find the 6th palindromic binary number:
 
-| Length | Count | Cumulative |
-|--------|-------|------------|
-| 1      | 1     | 1          |
-| 2      | 1     | 2          |
-| 3      | 2     | 4          |
-| 4      | 2     | 6 ✅       |
+1. Count palindromes by length:
 
-→ We are in length `4` group → Total = 6, Previous = 4 → `element = n - 4 - 1 = 1`
+| Length | Count         | Cumulative |
+|--------|---------------|------------|
+| 1      | `2^0 = 1`     | 1          |
+| 2      | `2^0 = 1`     | 2          |
+| 3      | `2^1 = 2`     | 4          |
+| 4      | `2^1 = 2` ✅  | 6          |
 
-So we want the **2nd palindromic binary of length 4**:
+✅ We're in length 4 group, and it's the 2nd element in that group:
 
-- First bit: `1`
-- Middle bits (from `element = 1 = 01`): `10`
-- Mirror → `1001`
+element = 6 - 4 - 1 = 1
 
-✅ Result: **`1001`** = **9 (decimal)**
+
+
+2. Build the first half:
+
+
+firstHalf = (1 << 3) | (1 << 1) = 1000 | 0010 = 1010
+
+
+
+
+3. Mirror `1010` → `1001`
+
+Final palindromic binary: `1001` → Decimal = **9**
+
+---
+
+## 🧮 Bitwise Operations Used
+
+| Operation         | Purpose                                             |
+|------------------|-----------------------------------------------------|
+| `1 << x`          | Left shift → set bit at position `x`               |
+| `n & (1 << x)`    | Check if bit at position `x` is set in `n`         |
+| `res | (1 << y)`  | Set bit at position `y` in result variable         |
+| `|` (OR)          | Merge set bits                                     |
+| `&` (AND)         | Check bit status                                   |
+
+---
+
+## 🧪 More Examples
+
+| n   | Palindromic Binary | Decimal |
+|-----|---------------------|---------|
+| 1   | `1`                 | 1       |
+| 2   | `11`                | 3       |
+| 3   | `101`               | 5       |
+| 4   | `111`               | 7       |
+| 5   | `1001`              | 9       |
+| 6   | `1111`              | 15      |
+| 7   | `10001`             | 17      |
+| 8   | `10101`             | 21      |
+| 9   | `11011`             | 27      |
+| 10  | `11111`             | 31      |
 
 ---
 
 ## ⏱️ Complexity Analysis
 
-| Type              | Complexity |
-|-------------------|------------|
-| Time Complexity   | O(log n)   |
-| Space Complexity  | O(1)       |
+| Metric            | Value     |
+|-------------------|-----------|
+| Time Complexity   | O(log n)  |
+| Space Complexity  | O(1)      |
 
-> Logarithmic because we're building palindromic binaries based on binary length (`log₂(n)` levels)
-
+- Time is **logarithmic** due to iterating over increasing binary lengths.
+- Space is **constant**, no extra memory needed.
