@@ -20,7 +20,7 @@ n! = n × (n - 1) × (n - 2) × ... × 2 × 1
 
 ### ✅ Example Calculations
 
-| Input `n` | Output `n!` | Explanation                  |
+| Input `n` | Output `n!` | Elaboration                  |
 |-----------|-------------|------------------------------|
 | 1         | 1           | 1                            |
 | 3         | 6           | 3 × 2 × 1                    |
